@@ -1,0 +1,29 @@
+README
+
+clear state file and directory structure:
+
+- data/
+- ExactSols/
+- visualisation/
+* full_system.cpp
+* dimensional_full_system.cpp
+* shockTests.H
+* ODEsolver.cpp
+
+
+data/ is populated with solution data as the simulation runs
+
+visualisation/ is the destination of graphics once files are compiled according to terminal instructions at the end of the simulation
+
+ExactSols/ contains the data of the exact solutions from the Toro tests and other papers. This data was used for the versions of the plots generated in the report.
+
+full_system.cpp is the primary program. Non-dimensionalised version which should be used for full system simulation. The program must be compiled with the header file: shockTests.H
+The TestCase object for the main studied problem is called : "ShockTest1"
+problem parameters are defined as TestCase objects in the header file. All other simulation parameters can be set in the primary program.
+The main() function at the very bottom of both programs is where the user can specify the simulation settings. 
+
+dimensional_full_system.cpp should be used to reproduce the Toro tests - validated against dimensional results. All the Toro tests are defined as TestCase objects in shockTests.H
+
+ODEsolver.cpp is the standalone semi-analytic ODE solver for the explosion tests. 
+
+
